@@ -19,10 +19,15 @@ Para crear la máquina virtual ingresamos con la cuenta de Azure el <a href="por
 
 1. Características de máquina virtual
 Vamos a crear la máquina virtual con requisitos mismos para el laboratorio.
+* Configuración básica
     ![Configuración básica](img/img3.PNG)
+* Tamaño
     ![Tamaño](img/img4.PNG)
+* Configuración básica
     ![Opciones](img/img5.PNG)
+* Resumen
     ![Resumen](img/img6.PNG)
+* Máquina virtual Creada
     ![Máquina virtual Creada](img/img7.PNG)
     
  Con esto hemos creado la máquina virtual de forma exitosa (Este proceso debe tardar alrededor de 5 min)
@@ -40,6 +45,7 @@ Procedemos a ejecutarlo e ingresamos la Ip como se ve en la Imagen y Click en Op
 1. Ingresamos Usuario y Clave
     ![Usuario](img/img11.PNG)    
     ![Clave](img/img12.PNG)    
+* Conexión exitosa
     ![Conexión exitosa](img/img13.PNG)    
 
 ##Parte 3 - Instalación servidor Lamp (Apache, PHP y MySql)
@@ -49,7 +55,9 @@ Procedemos a ejecutarlo e ingresamos la Ip como se ve en la Imagen y Click en Op
     //luego actualizamos componentes
     sudo apt-get upgrade
 ```
+* Actualización repositorios update
     ![Actualización repositorios update](img/img14.PNG)    
+* Actualización repositorios upgrade
     ![Actualización repositorios upgrade](img/img15.PNG)    
 1. Instalación de Servidor lamp
 ```Linux
@@ -57,18 +65,20 @@ Procedemos a ejecutarlo e ingresamos la Ip como se ve en la Imagen y Click en Op
 ```
 Nos desplazamos con la flecha abajo hasta [ ] LAMP Server  y la seleccionamos con barra espaciadora quedando asi [*] LAMP Server, tab y enter
     ![Servidor lamp](img/img16.PNG)    
+* Clave usuario root, pide confirmación
     ![Clave usuario root, pide confirmación](img/img17.PNG)    
-    ![Proceso instalación 1 min](img/img18.PNG) 
+* Proceso instalación 2 min
+    ![Proceso instalación 2 min](img/img18.PNG) 
 1. Ahora vamos a habilitar los puertos del servidor para poder acceder por http:// (puerto 80)
-   Nos desplazamos al menú grupos de Recursos y seleccionamos el recurso "demoUbuntu"
+ *  Nos desplazamos al menú grupos de Recursos y seleccionamos el recurso "demoUbuntu"
     ![Grupo de Recursos "demoUbunto"](img/img19.PNG)  
-   Seleccionamos Grupo de Seguridad de red
+ *  Seleccionamos Grupo de Seguridad de red
     ![Grupo de Seguridad de red](img/img20.PNG)    
-   Seleccionamos en la columna derecha Reglas de seguridad de entrada
+ *  Seleccionamos en la columna derecha Reglas de seguridad de entrada
     ![Reglas de seguridad de entrada](img/img21.PNG)    
-   Agregamos uno nueva regla de entrada agregando nombre y regla de puerto, en este caso habilite todos los puertos con "*"
+ *  Agregamos uno nueva regla de entrada agregando nombre y regla de puerto, en este caso habilite todos los puertos con "*"
     ![Reglas de seguridad de entrada](img/img22.PNG)    
-   Creación  exitosa
+ *  Creación  exitosa
     ![Reglas de seguridad de entrada](img/img23.PNG)    
 1. Validación de acceso y funcionalidad de servidor apache y php
 Crearemos un archivo php con la siguiente instrucción:
@@ -94,15 +104,15 @@ Ingresamos la siguiente instrucción
 ```Linux
    sudo apt-get install phpmyadmin
 ```
- Nos pide confirmar descarga de librarías adicionales, presionamos la tecla "y"
+* Nos pide confirmar descarga de librarías adicionales, presionamos la tecla "y"
     ![Instalación phpmyadmin](img/img26.PNG)    
- Seleccionamos servidor apache2 y aceptamos la configuración
+* Seleccionamos servidor apache2 y aceptamos la configuración
     ![Configuración phpmyadmin en apache2](img/img27.PNG)
- Presionamos enter para confirmar la configuración del archivo dbconfig-common 
+* Presionamos enter para confirmar la configuración del archivo dbconfig-common 
     ![Configuración del archivo dbconfig-common](img/img28.PNG)
- Ingresamos la clave del usuario root de MySql, recordar el paso 2 de la parte 3 
+* Ingresamos la clave del usuario root de MySql, recordar el paso 2 de la parte 3 
     ![Clave usuario root de MySql](img/img29.PNG)
- Para validar que este correcto nos dirigimos al navegador y copiamos http://[dirección ip]/phpmyadmin/
+* Para validar que este correcto nos dirigimos al navegador y copiamos http://[dirección ip]/phpmyadmin/
     ![Validación en navegador](img/img30.PNG)   
     ![Validación en navegador](img/img31.PNG)   
     
